@@ -54,4 +54,47 @@ final class EchoRoutineTests: XCTestCase {
         let container = try ModelContainer(for: schema, configurations: [modelConfiguration])
         XCTAssertNotNil(container)
     }
+    
+    // MARK: - Phase 2 Tests
+    
+    func testTaskValidatorEmptyTitle() {
+        XCTAssertFalse(TaskValidator.isValidTitle(""), "Empty string should be invalid")
+        XCTAssertFalse(TaskValidator.isValidTitle("   "), "Whitespace string should be invalid")
+        XCTAssertFalse(TaskValidator.isValidTitle("\n"), "Newline string should be invalid")
+        XCTAssertTrue(TaskValidator.isValidTitle("Valid Task"), "Valid title should be valid")
+    }
+    
+    @MainActor
+    func testTaskCompletionToggle() {
+        let task = TaskItem(title: "Toggle Test")
+        XCTAssertFalse(task.isCompleted)
+        
+        task.isCompleted = true
+        XCTAssertTrue(task.isCompleted)
+        
+        task.isCompleted = false
+        XCTAssertFalse(task.isCompleted)
+    }
+    
+    @MainActor
+    func testTaskPersistenceAndDelete() throws {
+        let schema = Schema([TaskItem.self, DailyRoutine.self])
+        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: true)
+        let container = try ModelContainer(for: schema, configurations: [modelConfiguration])
+        let context = container.mainContext
+        
+        let task = TaskItem(title: "Persistent Task")
+        context.insert(task)
+        try context.save()
+        
+        let fetchDescriptor = FetchDescriptor<TaskItem>()
+        var fetchedTasks = try context.fetch(fetchDescriptor)
+        XCTAssertEqual(fetchedTasks.count, 1)
+        
+        context.delete(task)
+        try context.save()
+        
+        fetchedTasks = try context.fetch(fetchDescriptor)
+        XCTAssertEqual(fetchedTasks.count, 0)
+    }
 }

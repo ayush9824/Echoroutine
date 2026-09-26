@@ -4,7 +4,7 @@ import SwiftData
 @main
 struct EchoRoutineApp: App {
     
-    var sharedModelContainer: ModelContainer = {
+    static let sharedModelContainer: ModelContainer = {
         let schema = Schema([
             TaskItem.self,
             DailyRoutine.self
@@ -22,6 +22,6 @@ struct EchoRoutineApp: App {
         WindowGroup {
             HomeView()
         }
-        .modelContainer(sharedModelContainer)
+        .modelContainer(Self.sharedModelContainer)
     }
 }

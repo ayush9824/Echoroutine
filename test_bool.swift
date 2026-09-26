@@ -1,0 +1,4 @@
+import Foundation
+let a: Bool = true
+let b: Bool = false
+print(a < b)

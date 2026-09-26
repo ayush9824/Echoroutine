@@ -8,8 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		038855448F564A84A336E2AC /* TaskItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD258E30C6B915AB9E3613F /* TaskItem.swift */; };
+		09188135BFBB97E2C03A4CA2 /* EditTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0550436B9B9F466C9C40EB /* EditTaskView.swift */; };
 		413B0946D53DF94D2B7A701C /* EchoRoutineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174F75A8044EB68C47A7654 /* EchoRoutineTests.swift */; };
 		5276A4B5256E8E78AA5F772F /* DailyRoutine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F8CF372BEC2FDA102BA9A /* DailyRoutine.swift */; };
+		5723A29E24B419FF7F26969B /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA332D9D6D2A73A1D6DB661 /* AddTaskView.swift */; };
+		5A941C6721C73F0365B94FEE /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6140141170FD3211B24377D5 /* TaskViewModel.swift */; };
+		71C801FA2226BEBEC77A983E /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DDBC087347EC3C4559457D /* TaskListView.swift */; };
 		891D9B2E62B4519559DA23C9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D26820310BB992D4477DB1 /* HomeView.swift */; };
 		93C325B36D15F5BDA040BD47 /* EchoRoutineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFD5EB409D4651C740A8C5D /* EchoRoutineApp.swift */; };
 /* End PBXBuildFile section */
@@ -25,13 +29,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		39DDBC087347EC3C4559457D /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
+		6140141170FD3211B24377D5 /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
 		622F8CF372BEC2FDA102BA9A /* DailyRoutine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyRoutine.swift; sourceTree = "<group>"; };
+		6AA332D9D6D2A73A1D6DB661 /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
 		9CD258E30C6B915AB9E3613F /* TaskItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItem.swift; sourceTree = "<group>"; };
 		BCFD5EB409D4651C740A8C5D /* EchoRoutineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EchoRoutineApp.swift; sourceTree = "<group>"; };
 		C174F75A8044EB68C47A7654 /* EchoRoutineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EchoRoutineTests.swift; sourceTree = "<group>"; };
-		CC401E4A5D31ABE4C3262E1D /* EchoRoutineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EchoRoutineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D69BEEED2D64F29D65522886 /* EchoRoutine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EchoRoutine.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC401E4A5D31ABE4C3262E1D /* EchoRoutineTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = EchoRoutineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D69BEEED2D64F29D65522886 /* EchoRoutine.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = EchoRoutine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8D26820310BB992D4477DB1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		FE0550436B9B9F466C9C40EB /* EditTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -56,6 +64,16 @@
 			);
 			sourceTree = "<group>";
 		};
+		1D511FA6120D3C5DFDD57266 /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				6AA332D9D6D2A73A1D6DB661 /* AddTaskView.swift */,
+				FE0550436B9B9F466C9C40EB /* EditTaskView.swift */,
+				39DDBC087347EC3C4559457D /* TaskListView.swift */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
 		35BB0C33BBDA90FFC4EF82B4 /* EchoRoutineTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				FC906C5F47F695C91E870E4D /* Home */,
+				1D511FA6120D3C5DFDD57266 /* Tasks */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -75,6 +94,7 @@
 		519C3C1784562CDC4BBFD857 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				6140141170FD3211B24377D5 /* TaskViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -165,9 +185,10 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 2700;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					B094E3EB491DB8A682D4DBDB = {
+						DevelopmentTeam = "";
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -197,10 +218,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5723A29E24B419FF7F26969B /* AddTaskView.swift in Sources */,
 				5276A4B5256E8E78AA5F772F /* DailyRoutine.swift in Sources */,
 				93C325B36D15F5BDA040BD47 /* EchoRoutineApp.swift in Sources */,
+				09188135BFBB97E2C03A4CA2 /* EditTaskView.swift in Sources */,
 				891D9B2E62B4519559DA23C9 /* HomeView.swift in Sources */,
 				038855448F564A84A336E2AC /* TaskItem.swift in Sources */,
+				71C801FA2226BEBEC77A983E /* TaskListView.swift in Sources */,
+				5A941C6721C73F0365B94FEE /* TaskViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,10 +283,8 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = F54PK5CL3D;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -282,7 +305,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -296,6 +318,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -303,7 +326,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ayushghimire.EchoRoutine;
+				PRODUCT_BUNDLE_IDENTIFIER = com.echoroutine.EchoRoutine;
 				SDKROOT = iphoneos;
 				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 6.0;
@@ -346,10 +369,8 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = F54PK5CL3D;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -363,7 +384,6 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
@@ -377,6 +397,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -384,7 +405,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ayushghimire.EchoRoutine;
+				PRODUCT_BUNDLE_IDENTIFIER = com.echoroutine.EchoRoutine;
 				SDKROOT = iphoneos;
 				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 6.0;
@@ -403,7 +424,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ayushghimire.EchoRoutineTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.echoroutine.EchoRoutineTests;
 				SDKROOT = iphoneos;
 				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 6.0;
@@ -423,7 +444,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ayushghimire.EchoRoutineTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.echoroutine.EchoRoutineTests;
 				SDKROOT = iphoneos;
 				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 6.0;
